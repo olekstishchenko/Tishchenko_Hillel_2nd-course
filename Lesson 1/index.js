@@ -7,3 +7,5 @@ const obj = {p:3.14}
 console.log(obj, obj.p)
 obj.p =3;
 obj.e=2.7;
+
+alert('Я – JavaScript!2.0')
