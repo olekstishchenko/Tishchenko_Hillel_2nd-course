@@ -1,3 +1,5 @@
+//MathOperation and Calculator
+
 let mathOperation = prompt('Яку математичну операцію оберете?(add, sub, mult, div)')
 let firstNumber = prompt('Введіть перше число');
 let numOne = Number(firstNumber)
@@ -24,6 +26,7 @@ if (mathOperation==='add') {
     alert('Неправильна функція')
 }
 
+// Hours to seconds
 
 let hours = prompt('Яку кількість годин необхідно перевести в секунди?');
 let hoursQuantity = Number(hours)
@@ -34,3 +37,11 @@ if (result >= 0) {
     else {
         alert('Неправильне значення')
 }
+
+//Average Value
+
+let firstValue = Number(prompt('Введіть перше число'));
+let secondValue = Number(prompt('Введіть друге число'));
+let thirdValue = Number(prompt('Введіть третє число'));
+let averageResult = (firstValue+secondValue+thirdValue)/3
+alert (`Середнє значення: ${averageResult}`)
