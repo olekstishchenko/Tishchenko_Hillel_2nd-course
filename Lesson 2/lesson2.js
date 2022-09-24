@@ -12,13 +12,13 @@ let numTwo = Number(secondNumber)
 //     ${firstNumber} / ${secondNumber} = ${numOne / numTwo}
 // `);
 
-if (mathOperation=='add') {
+if (mathOperation==='add') {
     alert(`${firstNumber} + ${secondNumber} = ${numOne + numTwo}`);
-} else if (mathOperation=='sub'){
+} else if (mathOperation==='sub'){
     alert(`${firstNumber} - ${secondNumber} = ${numOne - numTwo}`);
-} else if (mathOperation=='mult') {
+} else if (mathOperation==='mult') {
     alert(`${firstNumber} * ${secondNumber} = ${numOne * numTwo}`);
-} else if (mathOperation=='div'){
+} else if (mathOperation==='div'){
     alert(`${firstNumber} / ${secondNumber} = ${numOne / numTwo}`);
 } else {
     alert('Неправильна функція')
