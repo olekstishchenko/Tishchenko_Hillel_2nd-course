@@ -67,16 +67,81 @@ for (let i = 1; i < array.length; i++) {
 console.log(array);
 
 
-// const array2 = [1, 2, 3, 4, 5, 6, 7];
-// removeElement(array2, 5);
-// console.log(array2);
+let users = [
+    {
+        "index": 0,
+        "isActive": true,
+        "balance": "$2,226.60",
+        "name": "Eugenia Sawyer",
+        "gender": "female",
+        "phone": "+1 (840) 583-3207",
+        "address": "949 John Street, Rose, Puerto Rico, 1857"
+    },
+    {
+        "index": 1,
+        "isActive": true,
+        "balance": "$2,613.77",
+        "name": "Pauline Gallegos",
+        "gender": "female",
+        "phone": "+1 (985) 593-3328",
+        "address": "328 Greenpoint Avenue, Torboy, North Dakota, 6857"
+    },
+    {
+        "index": 2,
+        "isActive": false,
+        "balance": "$3,976.41",
+        "name": "Middleton Chaney",
+        "gender": "male",
+        "phone": "+1 (995) 591-2478",
+        "address": "807 Fleet Walk, Brutus, Arkansas, 9783"
+    },
+    {
+        "index": 3,
+        "isActive": true,
+        "balance": "$1,934.58",
+        "name": "Burns Poole",
+        "gender": "male",
+        "phone": "+1 (885) 559-3422",
+        "address": "730 Seba Avenue, Osage, Alabama, 6290"
+    },
+    {
+        "index": 4,
+        "isActive": true,
+        "balance": "$3,261.65",
+        "name": "Mcfadden Horne",
+        "gender": "male",
+        "phone": "+1 (942) 565-3988",
+        "address": "120 Scholes Street, Kirk, Michigan, 1018"
+    },
+    {
+        "index": 5,
+        "isActive": false,
+        "balance": "$1,790.56",
+        "name": "Suzette Lewis",
+        "gender": "female",
+        "phone": "+1 (837) 586-3283",
+        "address": "314 Dunne Place, Bawcomville, Guam, 9053"
+    }
+]
+
+
+
+
+
+// const array = [1, 2, 3, 4, 5, 6, 7];
+// removeElement(array, 5);
+// console.log(array);
 
 let array2 = [1, 2, 3, 4, 5, 6, 7];
-for (let i=0; i<array2.length; i++){
-    if (array2[i] === 5)
-        array2.splice(i,1);
-    else
-        array2.slice(0,i);
-}
+
+function removeElement(array, element){
+    for (let i=0; i<array.length; i++){
+        if (array[i] === element)
+            array.splice(i,1);
+        else
+            array.slice(0,i);
+}}
+
+removeElement(array2, 5);
 console.log(array2);
 
