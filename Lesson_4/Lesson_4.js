@@ -67,7 +67,7 @@ for (let i = 1; i < array.length; i++) {
 console.log(array);
 
 
-let users = [
+const users = [
     {
         "index": 0,
         "isActive": true,
@@ -123,14 +123,27 @@ let users = [
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
 ]
+console.log(users)
 
+let users2 = users
 
+for(let i=0; i<users2.length;i++){
+    users2[i].balance=users2[i].balance.split("")
+    removeElement(users2[i].balance,'$')
+    removeElement(users2[i].balance,',')
+    }
+for(let i=0; i<users2.length;i++){
+    users2[i].balance=Number(users2[i].balance.join(''))
+}
+console.log(users2)
 
+let userTel = []
+for(let i=0; i<users2.length;i++) {
+    if (users2[i].balance >= 2000)
+        userTel.push(users2[i].phone)
+}
+console.log(userTel);
 
-
-// const array = [1, 2, 3, 4, 5, 6, 7];
-// removeElement(array, 5);
-// console.log(array);
 
 let array2 = [1, 2, 3, 4, 5, 6, 7];
 
@@ -145,3 +158,21 @@ function removeElement(array, element){
 removeElement(array2, 5);
 console.log(array2);
 
+//HW13
+// function average number
+
+let array3 = [100,2,"a",4,'JavaScript',5,6,'n'];
+
+function averageNumbers(array) {
+    let str=0;
+    let n=0;
+    for (let i=0; i<array.length;i++) {
+        if (isNaN(array[i])) continue
+        else
+            str += array[i];
+            n++;
+    }
+    console.log(str/n)
+}
+
+averageNumbers(array3)
