@@ -149,10 +149,10 @@ let array2 = [1, 2, 3, 4, 5, 6, 7];
 
 function removeElement(array, element){
     for (let i=0; i<array.length; i++){
-        if (array[i] === element)
-            array.splice(i,1);
-        else
+        if (array[i] !== element)
             array.slice(0,i);
+        else
+            array.splice(i,1);
 }}
 
 removeElement(array2, 5);
@@ -176,3 +176,63 @@ function averageNumbers(array) {
 }
 
 averageNumbers(array3)
+
+//doMath(x,znak,y)
+
+// let x = +prompt('Введіть Х:');
+// let znak = prompt('Введіть знак: +, -, *, /, %, ^ ');
+// let y = +prompt('Введіть Y:');
+
+
+function doMath(x,znak,y){
+let r=0;
+        if (znak === "+") {
+            r = x + y;
+        } else if (znak === "-"){
+            r = x - y;
+        } else if (znak === "*"){
+            r = x * y;
+        } else if (znak === "/"){
+            r = x / y;
+        } else if (znak === "%"){
+            r = x % y;
+        } else if (znak === "^"){
+            r=x**y;
+        } else {
+            console.log('Неправильний знак')
+        }
+
+console.log(r);
+}
+// doMath(x,znak,y);
+
+//-Написать функцию заполнения пользовательскими данными двумерного массива.
+// Длину основного массива и внутренних массивов задаёт пользователь.
+// Значения всех элементов всех массивов задаёт пользователь.
+let a = []
+let b = []
+while(c = prompt('Введіть значення для першого внутрішнього масиву:')) {
+    a.push(c)}
+while(d = prompt('Введіть значення для другого внутрішнього масиву:')) {
+    b.push(d)}
+console.log([ [a],[b] ]);
+
+// -Создать функцию, которая убирает из строки все символы, которые мы передали вторым аргументом.
+// 'func("hello world", ['l', 'd'])' вернет нам "heo wor".
+// Исходную строку и символы для удаления задаёт пользователь
+//
+let indexes = []
+let ar = ["hello world"];
+let br = ['l','d'];
+console.log(ar)
+console.log(br)
+for(let i=0;i<ar.length;i++){
+    ar[i]=ar[i].split("");
+    for (let j=0;j<br.length;j++){
+        br[j]=br[j].split("");
+    removeElement(ar[i],`${br[j]}`)}
+}
+
+console.log(ar)
+
+
